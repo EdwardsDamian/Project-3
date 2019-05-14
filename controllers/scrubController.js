@@ -30,7 +30,33 @@ const scrubController = {
             console.log(err) 
                 res.status(500).json(err)
             }
+    },
+
+    update: async (req,res) => {
+        try {
+            const scrubId = req.params.id
+            const updatedScrub = req.body
+            const savedScrub = await Scrub.findByIdAndUpdate(scrubId, updatedScrub, {new: true})
+            res.json(savedScrub)
+        }   catch (err) {
+            console.log(err)
+            res.status(500).json(err)
         }
+    },
+
+    delete: async (req, res) => {
+        
+
+        try {
+            const scrubId = req.params.id
+            
+            await Scrub.findByIdAndRemove(scrubId);
+            res.json({msg:"deleted"});
+        }   catch (err) {
+            console.log(err)
+            res.status(500).json(err)
+        }
+    }
     
 }
 
