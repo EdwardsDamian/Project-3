@@ -1,12 +1,14 @@
 const mongoose = require('../db/connection.js')
 const Schema = mongoose.Schema
 
-const Order = new Order ({
+const Order = new Schema ({
     product: String,
     quantity: Number,
-    comments: String,
+    size: String,
+    totalPrice: Number,
     status: String,
-    shipDate: Date
+    shipDate: Date,
+    comments: String
 })
 
 module.exports = mongoose.model('Order', Order)
