@@ -12,6 +12,9 @@ router.put('/scrubs/:id', scrubController.update)
 router.delete('/scrubs/:id', scrubController.delete)
 
 router.get('/orders', orderController.index)
-router.get('/:id/order/:orderId', orderController.show)
-router.post('/:id/order', orderController.create)
+router.get('/orders/:orderId', orderController.show)
+router.post('/orders', orderController.create)
+router.put('/orders/:orderId', orderController.update)
+router.delete('/orders/:orderId', orderController.delete)
+
 module.exports = router

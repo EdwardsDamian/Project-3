@@ -16,7 +16,7 @@ const orderContoller = {
 
     show: async (req, res) => {
         try {
-            const orderId = req.params.id
+            const orderId = req.params.orderId
             const order = await Order.findById(orderId)
             res.json(order)
         }   catch(err) {
@@ -35,6 +35,29 @@ const orderContoller = {
             const savedOrder = await Order.create(newOrder)
             res.json(savedOrder)
         }   catch(err) {
+            console.log(err)
+            res.status(500).json(err)
+        }
+    },
+
+    update: async (req, res) => {
+        try {
+            const orderId = req.params.orderId
+            const updatedOrder = req.body
+            const savedOrder = await Order.findByIdAndUpdate(orderId, updatedOrder, {new: true})
+            res.json(savedOrder)
+        }   catch (err) {
+            console.log(err)
+            res.status(500).json(err)
+        }
+    },
+
+    delete: async (req, res) => {
+        try {
+            const orderId = req.params.orderId
+            await Order.findByIdAndRemove(orderId);
+            res.json({msg: "deleted" })
+        }   catch (err) {
             console.log(err)
             res.status(500).json(err)
         }
