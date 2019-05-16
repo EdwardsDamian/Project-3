@@ -9,7 +9,7 @@ const Order = new Schema ({
     size: String,
     totalPrice: Number,
     status: String,
-    shipDate: Date,
+    shipDate: String,
     comments: String
 })
 
