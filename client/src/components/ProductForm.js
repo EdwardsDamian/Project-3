@@ -46,9 +46,14 @@ render() {
                 <div><input name="price" type="number" min="0.00" step="0.01" placeholder="Price" onChange={this.handleNewProductChange} /></div>
                 <div><input type="submit" value="Create New Product" /></div>
             </form>
+
+                        
         </div>
     )
+
+    
 }
+
 
 }
 

@@ -12,8 +12,8 @@ class Product extends Component {
 
     showOptions = () => {
         const viewMode = this.props.viewMode
-        
-        const shopOptions = ( 
+
+        const shopOptions = (
             <div>
                 <button onClick={this.addToCart}>Add to Cart</button>
             </div>
@@ -35,7 +35,7 @@ class Product extends Component {
         // }
     };
 
-    render () {
+    render() {
         const scrubName = this.props.scrubName;
         const description = this.props.description;
         const image = this.props.scrubImage;
@@ -46,11 +46,11 @@ class Product extends Component {
             <div>
                 <h3>{scrubName}</h3>
                 <div>{description}</div>
-                  {<img src={image} width="200" height="200"></img>}
+                {<img src={image} width="200" height="200"></img>}
                 <div>{/* <img src={scrubs.image} ></img> */}</div>
                 <div>{size}</div>
-                <div>{price}</div>
-<button onClick={this.addToCart}>ADD ME TO CART!</button>
+                <div>${price}.00</div>
+                <button onClick={this.addToCart}>ADD ME TO CART!</button>
             </div>
         )
     }

@@ -59,7 +59,15 @@ class AdminView extends Component {
                             <h3>{orders.status} </h3>
                             <h3> {orders.shipDate}</h3>
                             <h3> ${orders.totalPrice}.00</h3>
-
+                            <h3>  {orders.name}   </h3>
+                            <h3>{orders.address} </h3>
+                            <h3> {orders.city}</h3>
+                            <h3>{orders.state} </h3>
+                            <h3>  {orders.zip}   </h3>
+                            
+{/* add extra keys  */}
+{/* add anothe map  */}
+{/* order.entireOrder.map() */}
                         </div>
 
                     )

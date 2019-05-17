@@ -4,6 +4,12 @@ const ObjectId = mongoose.Schema.Types.ObjectId
 
 const Order = new Schema ({
     scrub: {type:ObjectId, ref:"Scrub"},
+    entireOrder: [],
+    name: String,
+    address: String,
+    city: String,
+    state: String,
+    zip: String,
     product: String,
     quantity: Number,
     size: String,

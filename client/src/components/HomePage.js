@@ -82,9 +82,8 @@ class HomePage extends Component {
                 }
                     <CartView
                         cartList={this.state.cartList}
-                        removeProductFromCart={this.removeProductFromCart}/>
-
-
+                        removeProductFromCart={this.removeProductFromCart}
+                        />
                 
                 
             </div>

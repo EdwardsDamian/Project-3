@@ -13,3 +13,7 @@ export function getOrderList() {
 export function getNewProduct(newProductInfo) {
     return axios.post('/scrubs', newProductInfo);
 }
+
+export function getProductOrder(newOrder) {
+    return axios.post('/orders', newOrder )
+}
