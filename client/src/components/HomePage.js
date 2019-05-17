@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import { getProductList } from '../util.js'
-
+//import AdminView from './AdminView.js'
+import CartView from './CartView.js'
+import Product from './Product'
 class HomePage extends Component {
     state = {
-        productList: []
-    };
+        productList: [],
+        cartList:[]
+    }
+    
+    
 
     //when component loads display list components
 
@@ -17,7 +22,28 @@ class HomePage extends Component {
 
             );
         });
-    }
+
+    };
+
+    addProductToCart = (index) => {
+        const product = {...this.state.productList[index]}
+
+        const cartList = [...this.state.cartList]
+
+        cartList.push(product)
+
+        this.setState({cartList})
+    };
+
+    removeProductFromCart = (index) => {
+        const cartList = [...this.state.cartList]
+
+        cartList.splice(index, 1)
+
+        this.setState({cartList})
+    };
+
+    
 
 
     render() {
@@ -31,18 +57,32 @@ class HomePage extends Component {
                     // scrubs
                     return( 
                         <div key={index}>
-                        <h3>  {scrubs.name}   </h3>
+                        {/* <h3>  {scrubs.name}   </h3> */}
                        
-                        {/* <img src={scrubs.image} ></img> */}
-                        <h3>${scrubs.price}.00 </h3>
-                        <h3> {scrubs.size}</h3>
-                        
+                        {/* {<img src={scrubs.image} width="200" height="200"></img>} */}
+                        {/* <h3>${scrubs.price}.00 </h3> */}
+                        {/* <h3> {scrubs.size}</h3> */}
+                        <Product 
+                scrubName={scrubs.name}
+                scrubImage={scrubs.image}
+                description={scrubs.description}
+                size={scrubs.size}
+                price={scrubs.price}
+                key={index}
+                index={index}
+                addProductToCart={this.addProductToCart}
+                removeProductFromCart={this.removeProductFromCart}
+                />
+                
 
                         </div>
                     )
                 })
                 
                 }
+                    <CartView
+                        cartList={this.state.cartList}
+                        removeProductFromCart={this.removeProductFromCart}/>
 
 
                 

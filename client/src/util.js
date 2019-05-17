@@ -9,3 +9,7 @@ export function getProductList() {
 export function getOrderList() {
     return axios.get('/orders');
 }
+
+export function getNewProduct(newProductInfo) {
+    return axios.post('/scrubs', newProductInfo);
+}
