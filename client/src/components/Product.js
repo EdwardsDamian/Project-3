@@ -44,9 +44,9 @@ class Product extends Component {
 
         return (
             <div>
-                <h3>{scrubName}</h3>
+                <h3><a href="/product/:id">{scrubName}</a></h3>
                 <div>{description}</div>
-                {<img src={image} width="200" height="200"></img>}
+                {<img src={image} width="200" height="200" alt="scrub"></img>}
                 <div>{/* <img src={scrubs.image} ></img> */}</div>
                 <div>{size}</div>
                 <div>${price}.00</div>

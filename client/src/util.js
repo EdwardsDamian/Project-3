@@ -17,3 +17,7 @@ export function getNewProduct(newProductInfo) {
 export function getProductOrder(newOrder) {
     return axios.post('/orders', newOrder )
 }
+
+export function getUpdatedProduct(updatedInfo) {
+    return axios.put('/scrubs/:id', updatedInfo)
+}

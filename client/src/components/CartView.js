@@ -52,7 +52,7 @@ class CartView extends Component {
                         <div key={index}>
                             <h3>  {scrubs.name}   </h3>
 
-                            <h3>{<img src={scrubs.image} width="40" height="40"></img>}</h3>
+                            <h3>{<img src={scrubs.image} width="40" height="40" alt="scrub"></img>}</h3>
                             <h3>${scrubs.price}.00 </h3>
                             {/* <h3> {scrubs.size}</h3> */}}
                         </div>

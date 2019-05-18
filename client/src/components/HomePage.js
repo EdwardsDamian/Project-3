@@ -68,7 +68,7 @@ class HomePage extends Component {
                 description={scrubs.description}
                 size={scrubs.size}
                 price={scrubs.price}
-                key={index}
+                key={scrubs._id}
                 index={index}
                 addProductToCart={this.addProductToCart}
                 removeProductFromCart={this.removeProductFromCart}
