@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getOrderList,getProductList,getUpdatedOrder } from '../util.js'
+import { getOrderList,getProductList,getUpdatedOrder, getDeletedOrder } from '../util.js'
 
 class OrderForm extends Component {
 
@@ -40,6 +40,20 @@ class OrderForm extends Component {
         getUpdatedOrder(this.state.orderUpdate)
     };
 
+    handleDeleteOrder = (event) => {
+        const attributeName = event.target.name
+        const attributeValue = event.target.value
+
+        const delOrder = { ...this.state.delOrder }
+        delOrder[attributeName] = attributeValue
+        this.setState({ delOrder: delOrder })
+    }
+
+    deleteOrder = (event) => {
+        event.preventDefault()
+        getDeletedOrder(this.state.delOrder._id)
+    }
+
     render() {
         return (
             <div>
@@ -62,6 +76,11 @@ class OrderForm extends Component {
                     <div><input name="shipDate" type="text" size="50" placeholder="Ship Date" onChange={this.handleOrderUpdate} /></div>
                     <div><input name="comments" type="text" size="50" placeholder="Comments" onChange={this.handleOrderUpdate} /></div>
                     <div><input type="submit" value="Update This Order" /><br /></div>
+                </form><br /><br />
+
+                <form onSubmit={this.deleteOrder}>
+                    <select name="_id" onChange={this.handleDeleteOrder}>{this.state.orderList.map(order => (<option value={order._id}>{order._id}</option>))}</select>
+                    <div><br /><input type="submit" value="Delete This Order" /></div>
                 </form><br /><br />
             </div>
         )

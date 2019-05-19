@@ -28,4 +28,9 @@ export function getDeletedProduct(productId) {
 
 export function getUpdatedOrder(orderInfo) {
     return axios.put(`/orders/${orderInfo._id}`, orderInfo)
+
+}
+
+export function getDeletedOrder(orderId) {
+    return axios.delete(`/orders/${orderId}`)
 }
