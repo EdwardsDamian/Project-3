@@ -40,16 +40,16 @@ class CartView extends Component {
 
     render() {
         const totalPrice = this.props.cartList.reduce((totalPrice, scrubs) => {
-            return totalPrice + scrubs.price
+            return totalPrice + (scrubs.price * scrubs.quantity)
         }, 0.00)
 
         return (
             <div>
-                <h1>Cart</h1>
+                <h2>Cart</h2>
                 {this.props.cartList.map((scrubs, index) => {
                     // scrubs
                     return (
-                        <div key={index}>
+                        <div className="scrub-description" key={index}>
                             <h3>  {scrubs.name}   </h3>
 
                             <h3>{<img src={scrubs.image} width="40" height="40" alt="scrub"></img>}</h3>
@@ -65,14 +65,14 @@ class CartView extends Component {
 
                 <div>
             <form onSubmit={this.orderProduct}>
-                <div><input name="name" type="text" placeholder="Name" onChange={this.handleProductOrder} /></div>
-                <div><input name="address" type="text" placeholder="Shipping Address" onChange={this.handleProductOrder} /></div>
-                <div><input name="city" type="text" placeholder="City" onChange={this.handleProductOrder} /></div>
-                <div><input name="state" type="text" placeholder="State" onChange={this.handleProductOrder} /></div>
-                <div><input name="zip" type="text" placeholder="Zip Code" onChange={this.handleProductOrder} /></div>
-                <div><input name="totalPrice" type="number" value={totalPrice} hidden="hidden" /> </div>
-                <div><input type="submit" value="Order New Product" /></div>
-            </form>
+                <div><input name="name" type="text" size="50" placeholder="Name" onChange={this.handleProductOrder} /></div>
+                <div><input name="address" type="text" size="50" placeholder="Shipping Address" onChange={this.handleProductOrder} /></div>
+                <div><input name="city" type="text" size="50" placeholder="City" onChange={this.handleProductOrder} /></div>
+                <div><input name="state" type="text" size="50" placeholder="State" onChange={this.handleProductOrder} /></div>
+                <div><input name="zip" type="text" size="50" placeholder="Zip Code" onChange={this.handleProductOrder} /></div>
+                <div><input name="totalPrice" size="50" type="number" value={totalPrice} hidden="hidden" /> </div>
+                <div><input type="submit" value="Order New Product" /><br/></div>
+            </form><br/><br/>
         </div>
             </div>
         )

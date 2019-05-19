@@ -25,14 +25,7 @@ class Product extends Component {
             </div>
         )
 
-        // switch (viewMode) {
-        //     case 'SHOP':
-        //     return shopOptions
-        //     case 'CART':
-        //     return cartOptions
-        //     default:
-        //     return null 
-        // }
+        
     };
 
     render() {
@@ -46,11 +39,11 @@ class Product extends Component {
             <div>
                 <h3><a href="/product/:id">{scrubName}</a></h3>
                 <div>{description}</div>
-                {<img src={image} width="200" height="200" alt="scrub"></img>}
+                {<img src={image} hspace="10" vspace="10" width="300" height="200" alt="scrub"></img>}
                 <div>{/* <img src={scrubs.image} ></img> */}</div>
-                <div>{size}</div>
-                <div>${price}.00</div>
-                <button onClick={this.addToCart}>ADD ME TO CART!</button>
+                <div>{size}   <span>${price}.00 </span></div>
+                <div><br/></div>
+                <button hspace="10" onClick={this.addToCart}>ADD ME TO CART!</button>
             </div>
         )
     }

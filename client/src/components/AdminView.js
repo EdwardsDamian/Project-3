@@ -47,28 +47,53 @@ class AdminView extends Component {
 
         return (
             <div>
-                <h1>SweetGirl SugarScrubs by Analise</h1>
+                <div className="splash-image">
+                    <h1>SweetGirl <br />SugarScrubs <br />by <br />Analise</h1>
+                </div>
+
 
                 {this.state.orderList.map((orders, index) => {
                     // orders
                     return (
-                        <div key={index}>
-                            <h3>  {orders.product}   </h3>
-                            <h3>{orders.quantity} </h3>
-                            <h3> {orders.size}</h3>
-                            <h3>{orders.status} </h3>
-                            <h3> {orders.shipDate}</h3>
-                            <h3> ${orders.totalPrice}.00</h3>
-                            <h3>  {orders.name}   </h3>
-                            <h3>{orders.address} </h3>
-                            <h3> {orders.city}</h3>
-                            <h3>{orders.state} </h3>
-                            <h3>  {orders.zip}   </h3>
+                        <table key={index}>
+
                             
-{/* add extra keys  */}
-{/* add anothe map  */}
-{/* order.entireOrder.map() */}
-                        </div>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Size</th>
+                                    <th>Order Status</th>
+                                    {/* <th>Ship Date</th> */}
+                                    <th>Amount Sold</th>
+                                    {/* <th>Customer Name</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Zip</th> */}
+
+                                </tr>
+                            
+                            
+                                <tr>
+                                    <td>{orders.product}</td>
+                                    <td>{orders.quantity} </td>
+                                    <td> {orders.size}</td>
+                                    <td>{orders.status} </td>
+                                    {/* <td> {orders.shipDate}</td> */}
+                                    <td> ${orders.totalPrice}.00</td>
+                                    {/* how to parseInt() or Number() this value */}
+                                    {/* <td>  {orders.name}   </td>
+                                <td>{orders.address} </td>
+                                <td> {orders.city}</td>
+                                <td>{orders.state} </td>
+                                <td>  {orders.zip}   </td> */}
+                                    {/* add extra keys  */}
+                                    {/* add anothe map  */}
+                                    {/* order.entireOrder.map() */}
+
+                                </tr>
+                            
+                        </table>
 
                     )
                 })
@@ -79,7 +104,7 @@ class AdminView extends Component {
                     <h3> Total Ordered Quantity: {qtySold}</h3>
 
                 </div>
-                <ProductForm/>
+                <ProductForm />
 
             </div>
 
