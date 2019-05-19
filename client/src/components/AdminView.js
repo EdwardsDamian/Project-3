@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import ProductList from './ProductList.js'
 import { getOrderList } from '../util.js'
 import ProductForm from './ProductForm.js';
+import OrderForm from './OrderForm.js'
 
 class AdminView extends Component {
 
@@ -105,6 +105,7 @@ class AdminView extends Component {
 
                 </div>
                 <ProductForm />
+                <OrderForm />
 
             </div>
 
