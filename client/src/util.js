@@ -19,5 +19,9 @@ export function getProductOrder(newOrder) {
 }
 
 export function getUpdatedProduct(updatedInfo) {
-    return axios.put('/scrubs/:id', updatedInfo)
+    return axios.put(`/scrubs/${updatedInfo._id}`, updatedInfo)
+}
+
+export function getDeletedProduct(productId) {
+    return axios.delete(`/scrubs/${productId}`)
 }

@@ -37,6 +37,7 @@ const scrubController = {
             const scrubId = req.params.id
             const updatedScrub = req.body
             const savedScrub = await Scrub.findByIdAndUpdate(scrubId, updatedScrub, {new: true})
+            console.log(savedScrub)
             res.json(savedScrub)
         }   catch (err) {
             console.log(err)

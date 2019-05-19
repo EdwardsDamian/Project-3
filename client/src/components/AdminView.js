@@ -81,7 +81,7 @@ class AdminView extends Component {
                                     <td>{orders.status} </td>
                                     {/* <td> {orders.shipDate}</td> */}
                                     <td> ${orders.totalPrice}.00</td>
-                                    {/* how to parseInt() or Number() this value */}
+                                    
                                     {/* <td>  {orders.name}   </td>
                                 <td>{orders.address} </td>
                                 <td> {orders.city}</td>
