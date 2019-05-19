@@ -10,13 +10,13 @@ const Order = new Schema ({
     city: String,
     state: String,
     zip: String,
-    product: String,
-    quantity: Number,
-    size: String,
-    totalPrice: Number,
-    status: String,
-    shipDate: String,
-    comments: String
+    product: String,  //seed
+    quantity: Number, //seed
+    size: String,    //seed
+    totalPrice: Number, //seed
+    status: String,  //seed
+    shipDate: String, //seed
+    comments: String  //seed
 })
 
 module.exports = mongoose.model('Order', Order)

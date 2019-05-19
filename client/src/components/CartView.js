@@ -40,7 +40,7 @@ class CartView extends Component {
 
     render() {
         const totalPrice = this.props.cartList.reduce((totalPrice, scrubs) => {
-            return totalPrice + (scrubs.price * scrubs.quantity)
+            return totalPrice + (scrubs.price)
         }, 0.00)
 
         return (
@@ -54,7 +54,7 @@ class CartView extends Component {
 
                             <h3>{<img src={scrubs.image} width="40" height="40" alt="scrub"></img>}</h3>
                             <h3>${scrubs.price}.00 </h3>
-                            {/* <h3> {scrubs.size}</h3> */}}
+                            {/* <h3> {scrubs.size}</h3> */}
                         </div>
                     )
                 })

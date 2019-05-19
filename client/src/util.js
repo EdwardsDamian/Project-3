@@ -25,3 +25,7 @@ export function getUpdatedProduct(updatedInfo) {
 export function getDeletedProduct(productId) {
     return axios.delete(`/scrubs/${productId}`)
 }
+
+export function getUpdatedOrder(orderInfo) {
+    return axios.put(`/orders/${orderInfo._id}`, orderInfo)
+}
