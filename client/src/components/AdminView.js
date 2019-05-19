@@ -100,7 +100,7 @@ class AdminView extends Component {
 
                 }
                 <div>
-                    <h3> Total Sales: ${totalSales}.00</h3>
+                    <h3><strong> Total Sales: ${totalSales}.00</strong></h3>
                     <h3> Total Ordered Quantity: {qtySold}</h3>
 
                 </div>

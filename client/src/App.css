@@ -147,9 +147,11 @@ a {
 
 button {
   background: green;
+  color: white;
   border-radius: 20%;
   margin-left: 20px;
-  margin-bottom: 15px
+  margin-bottom: 15px;
+  
 }
 
 div {
