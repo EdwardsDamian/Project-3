@@ -109,6 +109,13 @@ a {
   color: rgba(10,10,10,.85);
 }
 
+/* .scrubs {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  
+} */
+
 .scrub-list{
   box-sizing: border-box;
   background: rgba(255,255,255, .35);
@@ -140,10 +147,7 @@ a {
   padding: 5px;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
+
 
 button {
   background: green;

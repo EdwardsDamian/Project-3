@@ -6,7 +6,8 @@ class OrderForm extends Component {
     state = {
         orderList: [],
         productList: [],
-        entireOrder:[]
+        entireOrder:[],
+        totalPrice: ''
     };
 
 
@@ -22,6 +23,10 @@ class OrderForm extends Component {
         getProductList().then(productList => {
             this.setState({ productList: productList.data })
         });
+        const totalPrice = this.state.orderList.reduce((totalPrice, scrubs) => {
+            return totalPrice + (scrubs.totalPrice)
+        }, 0.00)
+        this.setState({totalPrice: totalPrice})
     }
 
     handleOrderUpdate = (event) => {
@@ -55,6 +60,10 @@ class OrderForm extends Component {
     }
 
     render() {
+        // const totalPrice = this.props.cartList.reduce((totalPrice, scrubs) => {
+        //     return totalPrice + (scrubs.price)
+        // }, 0.00)
+        
         return (
             <div>
 
@@ -62,7 +71,7 @@ class OrderForm extends Component {
 
 
                 <form onSubmit={this.updateOrder}>
-                <select name="_id" onChange={this.handleOrderUpdate}>{this.state.orderList.map(order => (<option value={order._id}>{order._id}</option>))}</select>
+                <select name="_id" onChange={this.handleOrderUpdate}>{this.state.orderList.map(order => (<option key={order._id} value={order._id}>{order._id}</option>))}</select>
                     <div><input name="name" type="text" size="50" placeholder="Name" onChange={this.handleOrderUpdate} /></div>
                     <div><input name="address" type="text" size="50" placeholder="Shipping Address" onChange={this.handleOrderUpdate} /></div>
                     <div><input name="city" type="text" size="50" placeholder="City" onChange={this.handleOrderUpdate} /></div>
@@ -71,7 +80,7 @@ class OrderForm extends Component {
                     <div><input name="product" type="text" size="50" placeholder="Product Name" onChange={this.handleOrderUpdate} /></div>
                     <div><input name="quantity" type="text" size="50" placeholder="Quantity" onChange={this.handleOrderUpdate} /></div>
                     <div><input name="size" type="text" size="50" placeholder="size" onChange={this.handleOrderUpdate} /></div>
-                    {/* <div><input name="totalPrice" size="50" type="number" value={totalPrice} hidden="hidden" /> </div> */}
+                    <div><input name="totalPrice" size="50" type="number" value={this.state.totalPrice} hidden="hidden" onChange={this.handleOrderUpdate} /> </div>
                     <div><input name="status" type="text" size="50" placeholder="Status" onChange={this.handleOrderUpdate} /></div>
                     <div><input name="shipDate" type="text" size="50" placeholder="Ship Date" onChange={this.handleOrderUpdate} /></div>
                     <div><input name="comments" type="text" size="50" placeholder="Comments" onChange={this.handleOrderUpdate} /></div>
@@ -79,7 +88,7 @@ class OrderForm extends Component {
                 </form><br /><br />
 
                 <form onSubmit={this.deleteOrder}>
-                    <select name="_id" onChange={this.handleDeleteOrder}>{this.state.orderList.map(order => (<option value={order._id}>{order._id}</option>))}</select>
+                    <select name="_id" onChange={this.handleDeleteOrder}>{this.state.orderList.map(order => (<option key={order._id} value={order._id}>{order._id}</option>))}</select>
                     <div><br /><input type="submit" value="Delete This Order" /></div>
                 </form><br /><br />
             </div>

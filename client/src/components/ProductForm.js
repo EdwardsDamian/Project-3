@@ -79,17 +79,17 @@ class ProductForm extends Component {
                 </form>
 
                 <form onSubmit={this.updateProduct}>
-                    <select name="_id" onChange={this.handleProductUpdate}>{this.state.productList.map(product => (<option value={product._id}>{product.name}</option>))}</select>
+                    <select name="_id" onChange={this.handleProductUpdate}>{this.state.productList.map(product => (<option key={product._id} value={product._id}>{product.name}</option>))}</select>
                     <div><input name="name" type="text" size="50" placeholder="Name" onChange={this.handleProductUpdate} /></div>
                     <div><input name="description" type="text" size="50" placeholder="Description" onChange={this.handleProductUpdate} /></div>
                     <div><input name="image" type="text" size="50" placeholder="Image" onChange={this.handleProductUpdate} /></div>
                     <div><input name="size" type="text" size="50" placeholder="Size" onChange={this.handleProductUpdate} /></div>
-                    <div><input name="price" type="number" min="0.00" step="0.01" size="50" placeholder="Price" onChange={this.handleProductUpdate} /></div>
+                    <div><input name="totalPrice" type="number" min="0.00" step="0.01" size="50" placeholder="Price" onChange={this.handleProductUpdate} /></div>
                     <div><br /><input type="submit" value="Update Product Information" /></div>
                 </form><br /><br />
 
                 <form onSubmit={this.deleteProduct}>
-                    <select name="_id" onChange={this.handleDeleteProduct}>{this.state.productList.map(product => (<option value={product._id}>{product.name}</option>))}</select>
+                    <select name="_id" onChange={this.handleDeleteProduct}>{this.state.productList.map(product => (<option key={product._id} value={product._id}>{product.name}</option>))}</select>
                     <div><br /><input type="submit" value="Delete This Product" /></div>
                 </form><br /><br />
 

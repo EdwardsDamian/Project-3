@@ -19,8 +19,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/home" component={HomePage} />
+            <Route path="/shop" component={HomePage} />
             <Route path="/about" component={About} />
-            <Route exact path ="/cart" component={CartView} />
+            {/* <Route exact path ="/cart" component={CartView} /> */}
             <Route path ="/admin" component={AdminView} />
 
           </Switch>

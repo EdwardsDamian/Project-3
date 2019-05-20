@@ -70,7 +70,7 @@ class CartView extends Component {
                 <div><input name="city" type="text" size="50" placeholder="City" onChange={this.handleProductOrder} /></div>
                 <div><input name="state" type="text" size="50" placeholder="State" onChange={this.handleProductOrder} /></div>
                 <div><input name="zip" type="text" size="50" placeholder="Zip Code" onChange={this.handleProductOrder} /></div>
-                <div><input name="totalPrice" size="50" type="number" value={totalPrice} hidden="hidden" /> </div>
+                <div><input name="totalPrice" size="50" type="number" value={totalPrice} hidden="hidden" onChange={this.handleProductOrder} /> </div>
                 <div><input type="submit" value="Order New Product" /><br/></div>
             </form><br/><br/>
         </div>

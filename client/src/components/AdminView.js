@@ -26,14 +26,6 @@ class AdminView extends Component {
         this.props.deleteProductFromListByIndex(this.props.index)
     };
 
-    showOptions = () => {
-        const adminOptions = (
-            <div>
-                <button onClick={this.deleteProduct}>Delete</button>
-            </div>
-        )
-        //if (adminOptions)
-    }
 
     render() {
 
@@ -56,8 +48,11 @@ class AdminView extends Component {
                     // orders
                     return (
                         <table key={index}>
-
-                            
+                            <caption>AdminView: Order History ('get' Orders)</caption>
+                            <colgroup>
+                                <col style={{ width: 30 }}></col>
+                            </colgroup>
+                            <thead>
                                 <tr>
                                     <th>Product</th>
                                     <th>Quantity</th>
@@ -72,8 +67,8 @@ class AdminView extends Component {
                                 <th>Zip</th> */}
 
                                 </tr>
-                            
-                            
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td>{orders.product}</td>
                                     <td>{orders.quantity} </td>
@@ -81,31 +76,28 @@ class AdminView extends Component {
                                     <td>{orders.status} </td>
                                     {/* <td> {orders.shipDate}</td> */}
                                     <td> ${orders.totalPrice}.00</td>
-                                    
-                                    {/* <td>  {orders.name}   </td>
-                                <td>{orders.address} </td>
-                                <td> {orders.city}</td>
-                                <td>{orders.state} </td>
-                                <td>  {orders.zip}   </td> */}
-                                    {/* add extra keys  */}
-                                    {/* add anothe map  */}
-                                    {/* order.entireOrder.map() */}
+
 
                                 </tr>
-                            
+
+
+
+
+                            </tbody>
                         </table>
 
                     )
                 })
 
                 }
+
                 <div>
                     <h3><strong> Total Sales: ${totalSales}.00</strong></h3>
                     <h3> Total Ordered Quantity: {qtySold}</h3>
 
                 </div>
                 <ProductForm />
-                <OrderForm />
+                <OrderForm orderList={this.state.orderList}/>
 
             </div>
 
