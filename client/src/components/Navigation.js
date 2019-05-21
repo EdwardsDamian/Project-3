@@ -6,7 +6,7 @@ class Navigation extends Component {
         return (
             <div className="nav">
             <div className="nav-item"><span className="nav-logo">sGs</span></div>
-            <div className="nav-item"><span className="nav-logo"><a color="yellow" href="mailto:contact@sweetgirlscrubs.com">✉︎contact@sweetgirlscrubs.com</a></span></div>
+            <div className="nav-item"><span className="nav-logo"><a color="yellow" href="mailto:contact@sweetgirlscrubs.com">contact@sweetgirlscrubs.com</a></span></div>
             <div className="nav-item"><span className="nav-logo">☎︎301.674.5578</span></div>
             <div className="nav-item"><Link to="/home">Home</Link></div>
             <div className="nav-item"><Link to="/shop">Shop</Link></div>
