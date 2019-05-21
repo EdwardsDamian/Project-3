@@ -2,9 +2,9 @@
 
 ## Overview
 
-The goal of this project was to develop a web application for an online store using the MERN stack. 
+The goal of this project was to develop a web application for an online marketplace using the MERN stack. Deployment of the retail store (SweetGirl SugarScrubs), as the developer-defined MVP, was effected via Heroku.  The completed project may accesed using the link provided (below). 
 
-**Live site:** <https://sleepy-shore-80246.herokuapp.com/home>
+**Live site demo:** <https://sleepy-shore-80246.herokuapp.com/home>
 
 ## Technologies Used
 
@@ -30,7 +30,7 @@ SweetGirl Sugar Scrubs by Analise is a line of skin care products for all ages f
 The 'APP' has been structured utilizing the Model-View-Controller (MVC) pattern. React's JS library for building dynamic (interactive / reactive) user interfaces (UIs) serves as its front-end View layer.  And, our back-end uses the Express JS framework (running on top of Node JS) on the server.  Among other things, it controls the routing of tasks associated with receiving incoming requests from the client, performing predefined tasks, and returning responses to the client. The back-end also employs MongoDB, a document database, to store the data as JSON documents.
 
 
-Best practices in terms of following F.I.R.S.T guidelines for React components (i.e., focused, independent, reusable, small & testable) and for defining _RESTful_ routes using HTTP protocal. Full CRUD (Create, Read, Update & Delete) capability exists for model APIs (Scrubs and Orders). AJAX (Asynchronous Javascript and XML) requests are handled via the Axios, the Promise-based HTTP client, to update the database and receive information back from the server without having to refresh the browser. 
+Best practices in terms of following F.I.R.S.T guidelines for React components (i.e., focused, independent, reusable, small & testable) and for defining _RESTful_ routes using HTTP protocal. Full CRUD (Create, Read, Update & Delete) capability exists for model APIs (Scrubs and Orders). AJAX (Asynchronous Javascript and XML)requests are handled via the Axios, the Promise-based HTTP client, to update the database and receive information back from the server without having to refresh the browser. 
 
 ## Features
 
@@ -42,7 +42,14 @@ When combined with the above mentioned processes, shoppers and other users of th
 
 ## Future Development
 
-* (TBD)
+* Improve the CartView component (1) to indicate number of items in the shopping cart, showing that number in the cart icon; and (2) to display in separate cart items page; 
+* Develop shopper accounts, usernames and logins;
+* Setup model for collection and online payment processing (viz. Square, PayPal, Stripe...); 
+* Add features to view items in-cart that have not yet been ordered;
+* Build out ShopView to show each product's details individually;
+* Rework orders DB
+
+
 
 
 
