@@ -61,7 +61,7 @@ class HomePage extends Component {
 
                         <div key={index}>
                         
-                            <Product
+                            <Product className="scrub-description"
                                 scrubName={scrubs.name}
                                 scrubImage={scrubs.image}
                                 description={scrubs.description}
