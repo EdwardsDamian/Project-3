@@ -17,14 +17,14 @@
 
 .nav a {
   text-decoration: none;
-  color: white;
+  color: yellow;
   font-weight: bold;
   
 }
 
 .nav .nav-logo {
   font-family: 'Oswald', sans-serif;
-  color: #FFDF00;
+  color: rgb(30, 226, 40);
   font-weight: bold;
   font-size: 1.5em;
   padding-right: 250px;
@@ -114,7 +114,7 @@ a {
 
 
 button {
-  background: green;
+  background: rgb(30, 226, 40);
   color: white;
   border-radius: 20%;
   margin-left: 20px;
