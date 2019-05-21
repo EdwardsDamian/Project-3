@@ -16,7 +16,7 @@ The goal of this project was to develop a web application for an online store us
 ## Wireframe
 ![Image](images/p3-homepage-wireframe.png)
 ![Image](images/p3-cartview-wireframe.png)
-![Image]()
+![Image](images/p3-adminview-wireframe.png)
 
 ## WhiteBoard
 ![Image]()
