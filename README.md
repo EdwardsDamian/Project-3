@@ -14,6 +14,8 @@ The goal of this project was to develop a web application for an online store us
 * Designed and executed utilizing the methodologies, lessons, exercises and other course information provided over the course of GA's Software Engineering Immersive program (SEI-21) 
 
 ## Wireframe
+![Image](images/p3-homepage-wireframe.png)
+![Image]()
 ![Image]()
 
 ## WhiteBoard
