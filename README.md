@@ -21,7 +21,7 @@ The goal of this project was to develop a web application for an online store us
 ## WhiteBoard
 ![Image](images/p3-whiteboard1.png)
 ![Image](images/p3-whiteboard2.png)
-![Image]()
+![Image](images/component-tree.png)
 
 ## Main Application Process & Related Details
 
