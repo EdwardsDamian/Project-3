@@ -3,7 +3,7 @@
 
 ## Overview
 
-The goal of this project was to utilize the MERN stack to develop a web application for an online marketplace. Deployment of the retail store App (SweetGirl SugarScrubs), as the developer-defined MVP, was effected via Heroku.  The completed project may accesed using the link provided (below). 
+The goal of this project was to utilize the MERN stack to develop a web application for an online marketplace.  Deployment of the retail store App (SweetGirl SugarScrubs), as the developer-defined MVP, was effected via Heroku.  The completed project may be accessed using the link provided (below). 
 
 **Live site demo:** <https://sleepy-shore-80246.herokuapp.com/home>
 
@@ -13,7 +13,7 @@ The goal of this project was to utilize the MERN stack to develop a web applicat
 * Languages - React, MongoDB, Mongoose, Express, Node JS, Javascript, HTML5 & CSS3 
 * Text Editor - Visual Studio Code v.1.33.0
 * User Stories, Project Planning & Progress Tracking via [Trello](https://trello.com/invite/b/XwfQGkLd/b4c4dc0580791f20c35d674e2dd5a27a/ga-sei-21-project-3)
-* Designed and executed utilizing the methodologies, lessons, exercises and other course information provided over the course of GA's Software Engineering Immersive program (SEI-21) 
+* Designed and executed utilizing the methodologies, lessons, exercises and other information as provided over the course of GA's Software Engineering Immersive program (SEI-21) 
 
 
 ## Wireframe
