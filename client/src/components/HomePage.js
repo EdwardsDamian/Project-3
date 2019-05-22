@@ -54,9 +54,9 @@ class HomePage extends Component {
                 </div>
                 <h2>Place your order now!</h2>
                 <div>
-                    <p>Welcome to SweetGirl SugarScrubs by Analise, everyone’s favorite Online Bath Product Shop.  We’ve got great deals available! Browse through <br></br>our online product selection and select the perfect scrub for you or as a gift.</p>
+                    <p>Welcome to SweetGirl SugarScrubs by Analise, everyone’s favorite Online Bath Product Shop.  We’ve got great deals available! Browse through our online product offerings and select the perfect scrub for you or as a special gift.</p>
                     <br/>
-                    <p>SweetGirl SugarScrubs by Analise always seeks to improve its customers shopping experience, so please don’t hesitate to let us know if there’s anything more we can do to make it better.</p> 
+                    <p>SweetGirl SugarScrubs by Analise always seeks to provide  the highest level shopping experience. Please don’t hesitate to let us know if there’s anything we can do to make it better.</p> 
                 </div>
                 {this.state.productList.map((scrubs, index) => {
                     // scrubs
