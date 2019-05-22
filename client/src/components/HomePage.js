@@ -53,14 +53,17 @@ class HomePage extends Component {
                     <h1>SweetGirl <br />SugarScrubs <br />by <br />Analise</h1>
                 </div>
                 <h2>Place your order now!</h2>
-                <div><p>Welcome to SweetGirl SugarScrubs by Analise, everyone’s favorite Online Bath Product Shop. We’ve got great deals available. Browse through our online product selection and select the perfect scrub for you or as a gift. We’re always looking to improve the shopping experience for our customers, so please don’t hesitate to let us know if there’s anything more we can do to help.</p>
+                <div>
+                    <p>Welcome to SweetGirl SugarScrubs by Analise, everyone’s favorite Online Bath Product Shop.  We’ve got great deals available! Browse through <br></br>our online product selection and select the perfect scrub for you or as a gift.</p>
+                    <br/>
+                    <p>SweetGirl SugarScrubs by Analise always seeks to improve its customers shopping experience, so please don’t hesitate to let us know if there’s anything more we can do to make it better.</p> 
                 </div>
                 {this.state.productList.map((scrubs, index) => {
                     // scrubs
                     return (
 
                         <div key={index}>
-                        
+
                             <Product className="scrub-description"
                                 scrubName={scrubs.name}
                                 scrubImage={scrubs.image}
