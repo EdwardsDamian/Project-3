@@ -17,24 +17,30 @@ The goal of this project was to utilize the MERN stack to develop a web applicat
 
 
 ## Wireframe
+<details>
+<summary>Homepage, CartView and AdminView</summary>
 
 ![Image](images/p3-homepage-wireframe.png)
 ![Image](images/p3-cartview-wireframe.png)
 ![Image](images/p3-adminview-wireframe.png)
 
+</details>
 
 ## WhiteBoard
+<details>
+<summary>Pre-planning ERM, MVC architecture, & components diagram</summary> 
 
 ![Image](images/p3-whiteboard1.png)
 ![Image](images/p3-whiteboard2.png)
 ![Image](images/component-tree.png)
 
+</details>
 
 ## Main Application Process & Related Details
 
 SweetGirl Sugar Scrubs by Analise is a line of skin care products for all ages featuring only natural ingredients, crafted by hand in small sized batches. This web application provides an online retail experience so shoppers can order (purchase) products; and, aggregates relevent business data for the owner to manage the production and shipping operations associated with those orders. 
 
-For security reasons, the management view for all production and shipping operations can only be accessed through the /admin route.  At this stage of developement, the concern was around providing a button feature that could also be accesible to any shopper(s). 
+For security reasons, the management view for all production and shipping operations can only be accessed through the `/admin` route.  At this stage of developement, the concern was around providing a button feature that could also be accesible to any shopper(s). 
 
 The 'APP' has been structured utilizing the Model-View-Controller (MVC) pattern. React's JS library for building dynamic (interactive / reactive) user interfaces (UIs) serves as its front-end View layer.  And, our back-end uses the Express JS framework (running on top of Node JS) on the server.  Among other things, it controls the routing of tasks associated with receiving incoming requests from the client, performing predefined tasks, and returning responses to the client. The back-end also employs MongoDB, a document database, to store the data as JSON documents.
 
